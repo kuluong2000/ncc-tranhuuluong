@@ -1,0 +1,21 @@
+.sidebar {
+  width: 150px;
+  height: 100vh;
+  background-color: #191718;
+  &-item {
+    padding: 14px 91px 11px 16px;
+    border-bottom: 1px solid #aaaaaa;
+    &:hover > a {
+      color: white;
+    }
+    &:hover {
+      background-color: #5c5c5c;
+    }
+  }
+  &-item-link {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18.75px;
+    color: #aaaaaa;
+  }
+}
