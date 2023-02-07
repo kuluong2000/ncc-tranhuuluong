@@ -1,6 +1,6 @@
 .sidebar {
   width: 150px;
-  height: 100vh;
+  height: 935px;
   background-color: #191718;
   &-item {
     padding: 14px 91px 11px 16px;
@@ -17,5 +17,54 @@
     font-weight: bold;
     line-height: 18.75px;
     color: #aaaaaa;
+  }
+}
+.sub-menu {
+  width: 25px;
+  position: absolute;
+  top: 20px;
+  left: 0;
+  z-index: 999;
+  display: none;
+}
+.sub-menu div {
+  cursor: pointer;
+  width: 25px;
+  height: 3px;
+  background-color: red;
+  margin: 5px;
+  transition: transform 0.5s linear;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .sidebar {
+    width: 120px;
+  }
+}
+@media (max-width: 767px) {
+  .sidebar {
+    width: 90%;
+    padding-top: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-100%);
+    transition: all 0.25s linear;
+  }
+  .sidebar.active {
+    transform: translateX(0);
+  }
+  .sub-menu {
+    display: block;
+  }
+  .active .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .active .line2 {
+    opacity: 0;
+  }
+
+  .active .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
   }
 }
